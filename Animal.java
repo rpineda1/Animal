@@ -1,3 +1,14 @@
+
+/**
+ * This program sets a race between Mr Tortoise and MS Hare
+ * The purpose of this program is to show different threads running simultaneously.
+ * 
+ * @author Ricardo Pineda
+ * @version "%I%, %G%"
+ * @since 1.0
+ * @param	
+ */
+
 package Animal;
 public class Animal extends Thread implements Runnable {
 
@@ -32,15 +43,15 @@ public class Animal extends Thread implements Runnable {
 		Animal hare = new Animal("Ms Hare"); // adds statistics for the hare 
 		new Food();
 		hare.setPosition(0);
-		hare.setSpeed(9);
+		hare.setSpeed(10);
 		hare.setRestMax(220);
 		hare.winner = false;
 		hare.setDaemon(false); // user
-		Animal tortoise = new Animal("Mr tortoise"); // adds statistics for the tortoise
+		Animal tortoise = new Animal("Mr Tortoise"); // adds statistics for the tortoise
 		new Food();
 		tortoise.setPosition(0);
 		tortoise.setSpeed(5);
-		tortoise.setRestMax(165);
+		tortoise.setRestMax(110);
 		tortoise.winner = false;
 		tortoise.setDaemon(false); // user
 
@@ -74,10 +85,7 @@ public class Animal extends Thread implements Runnable {
 			}
 
 		}
-		if (position <= 120) {
-			winner = false;
-			System.out.println("\nthe Loser is: " + name + "!");
-		}
+
 	}
 }
 
